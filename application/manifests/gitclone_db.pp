@@ -2,7 +2,7 @@
 
 class application::gitclone_db {        
 	exec { "gitclone-db":
-		command => "git clone $application_gitclone_db $application_gitclone_db_destination",
+		command => "git clone $application_drupal_gitclone_db $application_drupal_gitclone_db_destination",
 		timeout => 3600, 
         logoutput=> on_failure, 
 		before => Class ["application::dbrestore"]

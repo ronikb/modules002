@@ -5,7 +5,7 @@
 
 class application::symlink {
 	exec { "symlink-for-files-folder":
-		command => "ln -s $application_symlink_files_folder_source $application_symlink_files_folder_destination",
+		command => "ln -s $application_drupal_symlink_files_folder_source $application_drupal_symlink_files_folder_destination",
 		require => Class["application::gitclone_app"],
 }
 }
